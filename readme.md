@@ -4,6 +4,16 @@
 
 https://github.com/apache/rocketmq-docker
 
+## POM 
+
+```
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-spring-boot-starter</artifactId>
+            <version>2.0.3</version>
+        </dependency>
+```
+
 ## config
 
 you need modify config
