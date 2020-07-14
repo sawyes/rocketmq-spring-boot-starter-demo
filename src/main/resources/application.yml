@@ -1,0 +1,23 @@
+server:
+  port: 9091
+
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/default?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: rocketmq-test-app
+
+mybatis:
+  mapper-locations:
+    - classpath:mapper/*.xml
+  configuration:
+    call-setters-on-nulls: true #为true时表示查询字段返回值为null时也返回该字段，false时则不返回
+
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    send-message-timeout: 3000000
+    group: rocketmq-group
